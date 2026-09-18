@@ -1,4 +1,4 @@
-# Gene-Analyser-App
+# Gene Analyser 🧬
 
 GeneAnalyzer is a desktop application built with Java 17+ and JavaFX designed to help users analyze, visualize, and compare DNA sequences in a simple, intuitive interface.
 
