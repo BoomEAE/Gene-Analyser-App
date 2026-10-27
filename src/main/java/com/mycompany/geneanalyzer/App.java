@@ -10,6 +10,7 @@ import java.io.IOException;
 
 /**
  * JavaFX App
+ * @author GeneAnalyzer
  */
 public class App extends Application {
 
