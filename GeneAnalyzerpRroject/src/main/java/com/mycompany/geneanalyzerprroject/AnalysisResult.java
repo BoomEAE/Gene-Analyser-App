@@ -18,4 +18,16 @@ public class AnalysisResult {
         this.nucleotideComposition = nucleotideComposition;
         this.gcContent = gcContent;
     }
+    
+    public String getSequenceId() {
+        return sequenceId;
+    }
+
+    public NucleotideComposition getNucleotideComposition() {
+        return nucleotideComposition;
+    }
+
+    public double getGcContent() {
+        return gcContent;
+    }
 }
