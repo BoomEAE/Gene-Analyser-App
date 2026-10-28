@@ -15,6 +15,7 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static final SequenceCollection globalSequenceCollection = new SequenceCollection();
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -34,6 +35,10 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch();
+    }
+    
+    public static SequenceCollection getGlobalSequenceCollection(){
+        return globalSequenceCollection;
     }
 
 }
