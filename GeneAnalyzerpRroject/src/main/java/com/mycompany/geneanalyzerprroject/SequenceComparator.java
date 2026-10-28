@@ -8,6 +8,14 @@ package com.mycompany.geneanalyzerprroject;
  *
  * @author Cynthia
  */
-public class SequenceComparator {
+public class SequenceComparator implements Comparator <DNASequence> {
     
+    @Override
+    public int compare(DNASequence sequence1, DNASequence sequence2) {
+        double gcContent1 = calculateGCContent(sequence1);
+        double gcContent2 = calculateGCContent(sequence2);
+
+        return Double.compare(gcContent1, gcContent2);
+    }
+
 }
