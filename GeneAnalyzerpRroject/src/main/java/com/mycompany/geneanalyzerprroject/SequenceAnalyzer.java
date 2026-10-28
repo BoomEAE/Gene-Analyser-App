@@ -10,4 +10,16 @@ package com.mycompany.geneanalyzerprroject;
  */
 public class SequenceAnalyzer {
     
+    public AnalysisResult analyze(DNASequence sequence) {
+
+        NucleotideComposition composition = new NucleotideComposition(sequence);
+        int total = sequence.length();
+        double gcContent = 0;
+
+        if (total > 0) {
+            gcContent = (double) (composition.getGCount()+ composition.getCCount()) / total * 100;
+        }
+
+        return new AnalysisResult(sequence.getId(), composition, gcContent);
+    }
 }
