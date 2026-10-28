@@ -51,4 +51,36 @@ public class NucleotideComposition {
         }
     }
     
+    public int getACount() {
+        return aCount;
+    }
+
+    public int getTCount() {
+        return tCount;
+    }
+
+    public int getCCount() {
+        return cCount;
+    }
+
+    public int getGCount() {
+        return gCount;
+    }
+
+    public double getAPercentage() {
+        return aPercentage;
+    }
+
+    public double getTPercentage() {
+        return tPercentage;
+    }
+
+    public double getCPercentage() {
+        return cPercentage;
+    }
+
+    public double getGPercentage() {
+        return gPercentage;
+    }
+    
 }
