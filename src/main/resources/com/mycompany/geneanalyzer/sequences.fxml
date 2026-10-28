@@ -87,18 +87,18 @@
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <center>
-            <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
          </center>
          <right>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
+                  <Button fx:id="loadBtn" mnemonicParsing="false" onAction="#loadSequenceFromFile" onMousePressed="#changeLoadBtnColor" onMouseReleased="#changeLoadBtnColorBack" style="-fx-background-color: #002070;" text="load" textFill="WHITE" />
+                  <Button fx:id="removeBtn" mnemonicParsing="false" onAction="#removeSequence" onMousePressed="#changeRemoveBtnColor" onMouseReleased="#changeRemoveBtnColorBack" style="-fx-background-color: #002070;" text="remove" textFill="WHITE" />
                </children>
             </VBox>
          </right>
          <bottom>
-            <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
          </bottom>
          <top>
             <Label text="List of all saved sequences:" textFill="WHITE" BorderPane.alignment="TOP_LEFT">

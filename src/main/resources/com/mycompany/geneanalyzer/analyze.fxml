@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -92,19 +93,20 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField>
+            <TextField fx:id="textField">
                <VBox.margin>
                   <Insets left="60.0" right="60.0" />
                </VBox.margin>
             </TextField>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                <children>
-                  <Button fx:id="saveBtn" mnemonicParsing="false" onMousePressed="#changeSaveBtnColor" onMouseReleased="#changeSaveBtnColorBack" style="-fx-background-color: #002070;" text="save" textFill="WHITE">
+                  <ComboBox fx:id="fileFormatSlector" prefWidth="150.0" promptText="Select file format" />
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveSequence" onMousePressed="#changeSaveBtnColor" onMouseReleased="#changeSaveBtnColorBack" style="-fx-background-color: #002070;" text="save" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="clearBtn" mnemonicParsing="false" onMousePressed="#changeClearBtnColor" onMouseReleased="#changeClearBtnColorBack" style="-fx-background-color: #002070;" text="clear" textFill="WHITE">
+                  <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clearField" onMousePressed="#changeClearBtnColor" onMouseReleased="#changeClearBtnColorBack" style="-fx-background-color: #002070;" text="clear" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
