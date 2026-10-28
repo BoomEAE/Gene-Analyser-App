@@ -16,6 +16,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.FileChooser;
+import javafx.scene.control.Alert;
 /**
  * FXML Controller class
  *
@@ -115,7 +116,13 @@ public class SequencesController implements Initializable {
                 sequenceCollection.loadFile(selectedFile.toPath());
                 updateListView();
             }
-        }catch(Exception e){e.printStackTrace();}
+        }catch(Exception e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("ERROR !");
+            alert.setHeaderText(null);
+            alert.setContentText("You cannot choose a file with an id that's the same as a already loaded file with that same id. " + 
+                                    "The program couldn't load this file."); 
+        }
     }
 
     @FXML

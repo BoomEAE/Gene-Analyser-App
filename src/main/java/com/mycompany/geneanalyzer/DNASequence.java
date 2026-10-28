@@ -1,7 +1,7 @@
 package com.mycompany.geneanalyzer;
 
 public class DNASequence {
-    private final String id;
+    private String id;
     private final String rawSequence;
 
     public DNASequence(String id, String rawSequence) {
@@ -17,6 +17,10 @@ public class DNASequence {
 
     public String getId() {
         return id;
+    }
+    
+    public void setId(String id){
+        this.id = id;
     }
 
     public String getRawSequence() {

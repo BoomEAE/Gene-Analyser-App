@@ -29,7 +29,9 @@ public class AnalyzeController implements Initializable {
 
 
     @FXML
-    private TextField textField;
+    private TextField sequenceField;
+    @FXML
+    private TextField idField;
     @FXML
     private ComboBox<SequenceCollection.Format> fileFormatSlector;
     @FXML
@@ -102,41 +104,41 @@ public class AnalyzeController implements Initializable {
     @FXML
     private void saveSequence(ActionEvent event) {
         
-        //Get the raw sequence directly from the textField
-        String rawSequence = textField.getText();
-        
         try{
-            
-            //We parse it
-            cleanSequence = reader.read(textField.getText());
-            
-            //Make sure that if its empty, then there are no errors
-            if(cleanSequence.isEmpty())return;
-            
-            
-            SequenceWriter writer = fileFormatSelected.writer();
-            String fileExtension = writer.extension();
-            
-            //Setup FileChooser so that the user can name it, and save the file where they want to save it
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle("Save DNA Sequence");
-            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter(fileFormatSelected.name() + " File(*." + fileExtension + ")", "*." + fileExtension));
-            
-            //Get the file location
-            File file = fileChooser.showSaveDialog(saveBtn.getScene().getWindow());
-            
-            //If the location as been selected (just in case they decide to click cancel)
-            //we write the file with its content at the chosen location
-            if(file != null){
-                String fileContent = writer.writeAll(cleanSequence);
-                Files.writeString(file.toPath(), fileContent);
+            //Make sure that the user typed a sequence and selected a format
+            if(sequenceField.getText() != null && fileFormatSelected != null){
+                //Get the raw sequence and parse it
+                cleanSequence = reader.read(sequenceField.getText());
+               
+                //If the user inputed a specific id then set it as that
+                if(idField.getText() != null){cleanSequence.get(0).setId(idField.getText());}
+
+                //So we can write the sequence with its extension as well
+                SequenceWriter writer = fileFormatSelected.writer();
+                String fileExtension = writer.extension();
+
+                //Setup FileChooser so that the user can name it, and save the file where they want to save it
+                FileChooser fileChooser = new FileChooser();
+                fileChooser.setTitle("Save DNA Sequence");
+                fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter(fileFormatSelected.name() + " File(*." + fileExtension + ")", "*." + fileExtension));
+
+                //Get the file location
+                File file = fileChooser.showSaveDialog(saveBtn.getScene().getWindow());
+
+                //If the location as been selected (just in case they decide to click cancel)
+                //we write the file with its content at the chosen location
+                if(file != null){
+                    String fileContent = writer.writeAll(cleanSequence);
+                    Files.writeString(file.toPath(), fileContent);
+                }
             }
         }catch(Exception e){e.printStackTrace();}
     }
     
     @FXML
     private void clearField(ActionEvent event){
-        textField.clear();
+        sequenceField.clear();
+        idField.clear();
         fileFormatSlector.setValue(null);
     }
 }
