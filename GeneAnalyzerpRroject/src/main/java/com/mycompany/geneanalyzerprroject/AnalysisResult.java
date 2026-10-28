@@ -13,4 +13,9 @@ public class AnalysisResult {
     private NucleotideComposition nucleotideComposition;
     private double gcContent;
     
+    public AnalysisResult(String sequenceId, NucleotideComposition nucleotideComposition, double gcContent) {
+        this.sequenceId = sequenceId;
+        this.nucleotideComposition = nucleotideComposition;
+        this.gcContent = gcContent;
+    }
 }
