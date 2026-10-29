@@ -86,14 +86,24 @@
       </VBox>
    </left>
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="80.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="40.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Enter DNA sequence here:" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="textField">
+            <TextField fx:id="sequenceField">
+               <VBox.margin>
+                  <Insets left="60.0" right="60.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="135.0" layoutY="53.0" text="Enter id here:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idField" layoutX="70.0" layoutY="163.0">
                <VBox.margin>
                   <Insets left="60.0" right="60.0" />
                </VBox.margin>
@@ -114,6 +124,9 @@
                </children>
             </HBox>
          </children>
+         <BorderPane.margin>
+            <Insets top="40.0" />
+         </BorderPane.margin>
       </VBox>
    </center>
 </BorderPane>
