@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+//Github repo link: https://github.com/BoomEAE/Gene-Analyser-App.git
+
 /**
  * JavaFX App
  * @author GeneAnalyzer
