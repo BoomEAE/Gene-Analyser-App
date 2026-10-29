@@ -99,6 +99,8 @@ public class SequencesController implements Initializable {
 
     @FXML
     private void loadSequenceFromFile(ActionEvent event) {
+        
+        //FileChooser setup so that the user can select a file conating a DNA sequence
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Load DNA File");
         fileChooser.getExtensionFilters().addAll(
@@ -110,6 +112,7 @@ public class SequencesController implements Initializable {
                 new FileChooser.ExtensionFilter("File(*.gb)", "*.gb")
         );
         
+        //Get valid file location and then load the file into the listview
         try{
             File selectedFile = fileChooser.showOpenDialog(loadBtn.getScene().getWindow());
             if(selectedFile != null){
@@ -117,11 +120,14 @@ public class SequencesController implements Initializable {
                 updateListView();
             }
         }catch(Exception e){
+            
+            //If the player loads a file with an id that's the same as another file's id, then an alert shows
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("ERROR !");
             alert.setHeaderText(null);
             alert.setContentText("You cannot choose a file with an id that's the same as a already loaded file with that same id. " + 
                                     "The program couldn't load this file."); 
+            alert.showAndWait();
         }
     }
 
