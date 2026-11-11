@@ -5,8 +5,10 @@
 package derick.dnadataclasses;
 
 /**
+ * Based on BIOJAVA Class
  *
  * @author 6300410
+ * Model Class to write FASTA sequence into external CSV file
  */
 public class FastaWriter implements SequenceWriter {
     private static final int LINE_WIDTH = 70;

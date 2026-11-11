@@ -5,8 +5,10 @@
 package derick.dnadataclasses;
 
 /**
+ * Based on BIOJAVA Class
  *
  * @author 6300410
+ * Model Class to write FASQ sequence into external CSV file
  */
 public class FastqWriter implements SequenceWriter {
     // ('I' = Phred 40 in Sanger encoding).

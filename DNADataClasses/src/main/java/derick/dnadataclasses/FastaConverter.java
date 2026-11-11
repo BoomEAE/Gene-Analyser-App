@@ -7,8 +7,10 @@ package derick.dnadataclasses;
 import java.util.ArrayList;
 import java.util.List;
 /**
+ * Based on BIOJAVA class
  *
  * @author 6300410
+ * Model class to parse FASTA DNA sequence
  */
 public class FastaConverter implements SequenceConverter {
 

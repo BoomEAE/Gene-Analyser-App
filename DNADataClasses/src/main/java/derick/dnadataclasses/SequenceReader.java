@@ -7,6 +7,7 @@ package derick.dnadataclasses;
 /**
  *
  * @author 6300410
+ * Model class used by collection class to read DNA sequence file
  */
 import java.io.IOException;
 import java.nio.file.Files;

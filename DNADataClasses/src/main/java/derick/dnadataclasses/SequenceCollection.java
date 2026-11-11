@@ -11,6 +11,7 @@ import java.util.*;
 /**
  *
  * @author 6300410
+ * Model class to store all sequences into a map linking an id to its sequence
  */
 
 public class SequenceCollection implements Iterable<DNASequence> {

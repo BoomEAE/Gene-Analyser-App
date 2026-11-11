@@ -5,8 +5,11 @@
 package derick.dnadataclasses;
 
 /**
- *
+ *based on BIOJAVA class
+ * 
  * @author 6300410
+ * Base Model class for DNA sequences
+ * contains id and rawSequence of DNA sequence
  */
 public class DNASequence {
     private final String id;

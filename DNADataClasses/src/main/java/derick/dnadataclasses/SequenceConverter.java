@@ -9,6 +9,7 @@ import java.util.List;
 /**
  *
  * @author 6300410
+ * Model interface class to define converter methods
  */
 
 public interface SequenceConverter {

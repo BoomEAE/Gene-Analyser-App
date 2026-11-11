@@ -5,8 +5,10 @@
 package derick.dnadataclasses;
 
 /**
+ * Based on BIOJAVA Class
  *
  * @author 6300410
+ * Model class to parse FASTQ DNA sequence
  */
 import java.util.ArrayList;
 import java.util.List;

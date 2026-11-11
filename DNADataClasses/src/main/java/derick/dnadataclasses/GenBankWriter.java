@@ -5,8 +5,10 @@
 package derick.dnadataclasses;
 
 /**
+ * Based on BIOJAVA Class
  *
  * @author 6300410
+ * Model Class for writing GenBank DNA sequence into external CSV
  */
 public class GenBankWriter implements SequenceWriter {
     private static final int LINE_BASES = 60;

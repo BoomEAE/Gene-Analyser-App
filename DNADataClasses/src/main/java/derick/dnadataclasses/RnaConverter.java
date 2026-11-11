@@ -6,8 +6,10 @@ package derick.dnadataclasses;
 
 import java.util.List;
 /**
+ * Based on BIOJAVA Class
  *
  * @author 6300410
+ * Model Class for parsing RNA Sequence into DNA Sequence
  */
 
 public class RnaConverter implements SequenceConverter {

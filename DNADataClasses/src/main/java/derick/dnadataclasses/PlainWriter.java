@@ -5,8 +5,10 @@
 package derick.dnadataclasses;
 
 /**
+ * Based on BIOJAVA Class
  *
  * @author 6300410
+ * Model Class for writing a plain sequence into external CSV
  */
 public class PlainWriter implements SequenceWriter {
 

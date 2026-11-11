@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 /**
  *
  * @author 6300410
+ * Model interface class to define writer methods
  */
 
 public interface SequenceWriter {

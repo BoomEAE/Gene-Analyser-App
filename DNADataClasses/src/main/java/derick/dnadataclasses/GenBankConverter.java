@@ -7,8 +7,10 @@ package derick.dnadataclasses;
 import java.util.ArrayList;
 import java.util.List;
 /**
+ * Based on BIOJAVA Class
  *
  * @author 6300410
+ * Model Class to read GenBank DNA sequence
  */
 
 public class GenBankConverter implements SequenceConverter {

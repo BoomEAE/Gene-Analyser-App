@@ -5,8 +5,10 @@
 package derick.dnadataclasses;
 
 /**
+ * Based on  BIOJAVA Class
  *
  * @author 6300410
+ * Model Class for writing RNA sequence into external CSV
  */
 public class RnaWriter implements SequenceWriter {
 

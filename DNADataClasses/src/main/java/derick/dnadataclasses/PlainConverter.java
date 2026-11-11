@@ -6,8 +6,10 @@ package derick.dnadataclasses;
 
 import java.util.List;
 /**
+ * Based on BIOJAVA Class
  *
  * @author 6300410
+ * Model Class to parse plain sequence with no id
  */
 
 public class PlainConverter implements SequenceConverter {
