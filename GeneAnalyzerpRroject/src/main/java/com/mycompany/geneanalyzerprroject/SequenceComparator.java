@@ -19,6 +19,35 @@ public class SequenceComparator implements Comparator <DNASequence> {
         return Double.compare(gcContent1, gcContent2);
     }
     
+     public DNASequence[] findMostSimilarSequences(List<DNASequence> sequences) { 
+        if (sequences == null || sequences.size() < 2) {
+            return null;
+        }
+ 
+        DNASequence[] result = new DNASequence[2];
+        double smallestDifference = Double.MAX_VALUE;
+
+        for (int i = 0; i < sequences.size(); i++) {
+            DNASequence sequence1 = sequences.get(i);
+
+            for (int j = i + 1; j < sequences.size(); j++) {
+
+                DNASequence sequence2 = sequences.get(j);
+                double gcContent1 = calculateGCContent(sequence1);
+                double gcContent2 = calculateGCContent(sequence2);
+                double difference = Math.abs(gcContent1 - gcContent2);
+
+                if (difference < smallestDifference) {
+                    smallestDifference = difference;
+                    result[0] = sequence1;
+                    result[1] = sequence2;
+                }
+            }
+        }
+
+        return result;
+    }
+    
     private double calculateGCContent(DNASequence sequence) {
         String dna = sequence.getRawSequence().toUpperCase();
         int gcCount = 0;
