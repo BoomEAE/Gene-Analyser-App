@@ -7,7 +7,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author Cynthia
+ * @author Cynthia Zhang
  */
 public class SequenceComparator implements Comparator <DNASequence> {
     

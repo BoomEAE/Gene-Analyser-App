@@ -6,7 +6,7 @@ package com.mycompany.geneanalyzerprroject;
 
 /**
  *
- * @author Cynthia
+ * @author Cynthia Zhang
  */
 public class SequenceAnalyzer {
     
