@@ -4,6 +4,9 @@
  */
 package com.mycompany.geneanalyzerprroject;
 import java.util.Comparator;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  *
@@ -47,6 +50,24 @@ public class SequenceComparator implements Comparator <DNASequence> {
 
         return result;
     }
+     
+     
+    public List<DNASequence> organizeSequences(List<DNASequence> sequences) {
+
+        if (sequences == null) {
+            return null;
+        }
+
+        List<DNASequence> organizedSequences = new ArrayList<>();
+
+        for (int i = 0; i < sequences.size(); i++) {
+            organizedSequences.add(sequences.get(i));
+        }
+
+        Collections.sort(organizedSequences, this);
+        return organizedSequences;
+    }
+
     
     private double calculateGCContent(DNASequence sequence) {
         String dna = sequence.getRawSequence().toUpperCase();
