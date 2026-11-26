@@ -2,12 +2,17 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.geneanalyzer.HomeController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1e1e1e;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.geneanalyzer.CompareController">
    <left>
       <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #002070;" BorderPane.alignment="CENTER">
          <children>
@@ -80,4 +85,260 @@
          </children>
       </VBox>
    </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Compare Sequences:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308">
+               <children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity">
+                     <children>
+                        <ComboBox fx:id="comboBox1" prefWidth="150.0" promptText="Select sequence 1" />
+                        <ImageView fitHeight="50.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../icons/arrow-left-right.png" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="comboBox2" prefWidth="150.0" promptText="Select sequence 2" />
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#setOnCompare" style="-fx-background-color: #002070;" text="Compare" textFill="WHITE" />
+               </children>
+            </VBox>
+            <Pane style="-fx-background-color: white;">
+               <children>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0">
+                     <children>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="150.0">
+                           <children>
+                              <Label text="Sequence 1" />
+                              <Label text="vs" />
+                              <Label text="Sequence 2" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="Bases:" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="27.0" spacing="80.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="amountALbl1" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="difference of:" />
+                                    <Label fx:id="amountADiffLbl" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="amountALbl2" text="N/A" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="44.0" spacing="80.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="amountTLbl1" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="difference of:" />
+                                    <Label fx:id="amountTDiffLbl" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="amountTLbl2" text="N/A" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="61.0" spacing="80.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="amountCLbl1" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="difference of:" />
+                                    <Label fx:id="amountCDiffLbl" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="amountCLbl2" text="N/A" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="78.0" spacing="80.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="amountGLbl1" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="difference of:" />
+                                    <Label fx:id="amountGDiffLbl" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="amountGLbl2" text="N/A" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="95.0" spacing="80.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="amountGCLbl1" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="difference of:" />
+                                    <Label fx:id="amountGCDiffLbl" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="amountGCLbl2" text="N/A" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="27.0">
+                           <children>
+                              <Label text="Base Percentages: " />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="44.0" spacing="80.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="percentageALbl1" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="difference of:" />
+                                    <Label fx:id="percentageADiffLbl" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="percentageALbl2" text="N/A" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="146.0" spacing="80.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="percentageTLbl1" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="difference of:" />
+                                    <Label fx:id="percentageTDiffLbl" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="percentageTLbl2" text="N/A" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="163.0" spacing="80.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="percentageCLbl1" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="difference of:" />
+                                    <Label fx:id="percentageCDiffLbl" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="percentageCLbl2" text="N/A" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="180.0" spacing="80.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="percentageGLbl1" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="difference of:" />
+                                    <Label fx:id="percentageGDiffLbl" text="N/A" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
+                                 <children>
+                                    <Label text="A amount:" />
+                                    <Label fx:id="percentageGLbl2" text="N/A" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
 </BorderPane>
