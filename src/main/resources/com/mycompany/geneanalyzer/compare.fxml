@@ -125,7 +125,7 @@
                               <Label text="Bases:" />
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="20.0" layoutY="27.0" spacing="80.0">
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="27.0" spacing="60.0">
                            <children>
                               <HBox spacing="10.0">
                                  <children>
@@ -147,11 +147,11 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="20.0" layoutY="44.0" spacing="80.0">
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="44.0" spacing="60.0">
                            <children>
                               <HBox spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="T amount:" />
                                     <Label fx:id="amountTLbl1" text="N/A" />
                                  </children>
                               </HBox>
@@ -163,17 +163,17 @@
                               </HBox>
                               <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="T amount:" />
                                     <Label fx:id="amountTLbl2" text="N/A" />
                                  </children>
                               </HBox>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="20.0" layoutY="61.0" spacing="80.0">
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="61.0" spacing="60.0">
                            <children>
                               <HBox spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="C amount:" />
                                     <Label fx:id="amountCLbl1" text="N/A" />
                                  </children>
                               </HBox>
@@ -185,17 +185,17 @@
                               </HBox>
                               <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="C amount:" />
                                     <Label fx:id="amountCLbl2" text="N/A" />
                                  </children>
                               </HBox>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="20.0" layoutY="78.0" spacing="80.0">
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="78.0" spacing="60.0">
                            <children>
                               <HBox spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="G amount:" />
                                     <Label fx:id="amountGLbl1" text="N/A" />
                                  </children>
                               </HBox>
@@ -207,17 +207,17 @@
                               </HBox>
                               <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="G amount:" />
                                     <Label fx:id="amountGLbl2" text="N/A" />
                                  </children>
                               </HBox>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="20.0" layoutY="95.0" spacing="80.0">
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="95.0" spacing="60.0">
                            <children>
                               <HBox spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="GC amount:" />
                                     <Label fx:id="amountGCLbl1" text="N/A" />
                                  </children>
                               </HBox>
@@ -229,7 +229,7 @@
                               </HBox>
                               <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="GC amount:" />
                                     <Label fx:id="amountGCLbl2" text="N/A" />
                                  </children>
                               </HBox>
@@ -240,11 +240,11 @@
                               <Label text="Base Percentages: " />
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="20.0" layoutY="44.0" spacing="80.0">
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="44.0" spacing="60.0">
                            <children>
                               <HBox spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="A percentage:" />
                                     <Label fx:id="percentageALbl1" text="N/A" />
                                  </children>
                               </HBox>
@@ -256,17 +256,17 @@
                               </HBox>
                               <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="A percentage:" />
                                     <Label fx:id="percentageALbl2" text="N/A" />
                                  </children>
                               </HBox>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="20.0" layoutY="146.0" spacing="80.0">
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="146.0" spacing="60.0">
                            <children>
                               <HBox spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="T percentage:" />
                                     <Label fx:id="percentageTLbl1" text="N/A" />
                                  </children>
                               </HBox>
@@ -278,17 +278,17 @@
                               </HBox>
                               <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="T percentage:" />
                                     <Label fx:id="percentageTLbl2" text="N/A" />
                                  </children>
                               </HBox>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="20.0" layoutY="163.0" spacing="80.0">
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="163.0" spacing="60.0">
                            <children>
                               <HBox spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="C percentage:" />
                                     <Label fx:id="percentageCLbl1" text="N/A" />
                                  </children>
                               </HBox>
@@ -300,17 +300,17 @@
                               </HBox>
                               <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="C percentage:" />
                                     <Label fx:id="percentageCLbl2" text="N/A" />
                                  </children>
                               </HBox>
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" layoutX="20.0" layoutY="180.0" spacing="80.0">
+                        <HBox alignment="CENTER" layoutX="20.0" layoutY="180.0" spacing="60.0">
                            <children>
                               <HBox spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="G percentage:" />
                                     <Label fx:id="percentageGLbl1" text="N/A" />
                                  </children>
                               </HBox>
@@ -322,7 +322,7 @@
                               </HBox>
                               <HBox layoutX="715.0" layoutY="10.0" spacing="10.0">
                                  <children>
-                                    <Label text="A amount:" />
+                                    <Label text="G percentage:" />
                                     <Label fx:id="percentageGLbl2" text="N/A" />
                                  </children>
                               </HBox>

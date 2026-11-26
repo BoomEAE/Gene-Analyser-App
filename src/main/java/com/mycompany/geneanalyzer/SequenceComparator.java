@@ -11,12 +11,14 @@ import java.util.List;
  */
 public class SequenceComparator implements Comparator <DNASequence> {
     
+    private SequenceValidator sequenceValidator = new SequenceValidator();
+    
     @Override
     public int compare(DNASequence sequence1, DNASequence sequence2) {
         double gcContent1 = calculateGCContent(sequence1);
         double gcContent2 = calculateGCContent(sequence2);
 
-        return Double.compare(gcContent1, gcContent2);
+        return Math.abs(Double.compare(gcContent1, gcContent2));
     }
     
      public DNASequence[] findMostSimilarSequences(List<DNASequence> sequences) { 
@@ -65,5 +67,53 @@ public class SequenceComparator implements Comparator <DNASequence> {
         }
 
         return (double) gcCount / dna.length() * 100;
+    }
+    
+    public int getBaseADifference(DNASequence sequence1, DNASequence sequence2){
+        NucleotideComposition nucleotideComposition1 = new NucleotideComposition(sequence1);
+        NucleotideComposition nucleotideComposition2 = new NucleotideComposition(sequence2);
+        return Math.abs(nucleotideComposition1.getACount() - nucleotideComposition2.getACount());
+    }
+    
+    public int getBaseTDifference(DNASequence sequence1, DNASequence sequence2){
+        NucleotideComposition nucleotideComposition1 = new NucleotideComposition(sequence1);
+        NucleotideComposition nucleotideComposition2 = new NucleotideComposition(sequence2);
+        return Math.abs(nucleotideComposition1.getTCount() - nucleotideComposition2.getTCount());
+    }
+    
+    public int getBaseCDifference(DNASequence sequence1, DNASequence sequence2){
+        NucleotideComposition nucleotideComposition1 = new NucleotideComposition(sequence1);
+        NucleotideComposition nucleotideComposition2 = new NucleotideComposition(sequence2);
+        return Math.abs(nucleotideComposition1.getCCount() - nucleotideComposition2.getCCount());
+    }
+    
+    public int getBaseGDifference(DNASequence sequence1, DNASequence sequence2){
+        NucleotideComposition nucleotideComposition1 = new NucleotideComposition(sequence1);
+        NucleotideComposition nucleotideComposition2 = new NucleotideComposition(sequence2);
+        return Math.abs(nucleotideComposition1.getGCount() - nucleotideComposition2.getGCount());
+    }
+    
+    public double getPercentageADifference(DNASequence sequence1, DNASequence sequence2){
+        NucleotideComposition nucleotideComposition1 = new NucleotideComposition(sequence1);
+        NucleotideComposition nucleotideComposition2 = new NucleotideComposition(sequence2);
+        return Math.abs(nucleotideComposition1.getAPercentage() - nucleotideComposition2.getAPercentage());
+    }
+    
+    public double getPercentageTDifference(DNASequence sequence1, DNASequence sequence2){
+        NucleotideComposition nucleotideComposition1 = new NucleotideComposition(sequence1);
+        NucleotideComposition nucleotideComposition2 = new NucleotideComposition(sequence2);
+        return Math.abs(nucleotideComposition1.getTPercentage() - nucleotideComposition2.getTPercentage());
+    }
+    
+    public double getPercentageCDifference(DNASequence sequence1, DNASequence sequence2){
+        NucleotideComposition nucleotideComposition1 = new NucleotideComposition(sequence1);
+        NucleotideComposition nucleotideComposition2 = new NucleotideComposition(sequence2);
+        return Math.abs(nucleotideComposition1.getCPercentage() - nucleotideComposition2.getCPercentage());
+    }
+    
+    public double getPercentageGDifference(DNASequence sequence1, DNASequence sequence2){
+        NucleotideComposition nucleotideComposition1 = new NucleotideComposition(sequence1);
+        NucleotideComposition nucleotideComposition2 = new NucleotideComposition(sequence2);
+        return Math.abs(nucleotideComposition1.getGPercentage() - nucleotideComposition2.getGPercentage());
     }
 }

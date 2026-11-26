@@ -52,6 +52,7 @@ public class ResultsController implements Initializable {
         //Add the items to the combobox
         updateComboBox();
         
+        //We update the displays when the user selects something else from the combobox
         comboBox.getSelectionModel().selectedItemProperty().addListener((ov, oldSequence, newSequence) -> {
             updateDataDisplays(newSequence);
         });
@@ -108,10 +109,10 @@ public class ResultsController implements Initializable {
             amountCLbl.setText("" + analysisResult.getNucleotideComposition().getCCount());
             amountGLbl.setText("" + analysisResult.getNucleotideComposition().getGCount());
             gcContentLbl.setText("" + analysisResult.getGcContent());
-            percentageALbl.setText("" + analysisResult.getNucleotideComposition().getAPercentage());
-            percentageTLbl.setText("" + analysisResult.getNucleotideComposition().getTPercentage());
-            percentageCLbl.setText("" + analysisResult.getNucleotideComposition().getCPercentage());
-            percentageGLbl.setText("" + analysisResult.getNucleotideComposition().getGPercentage());
+            percentageALbl.setText(analysisResult.getNucleotideComposition().getAPercentage()+"%");
+            percentageTLbl.setText(analysisResult.getNucleotideComposition().getTPercentage()+"%");
+            percentageCLbl.setText(analysisResult.getNucleotideComposition().getCPercentage()+"%");
+            percentageGLbl.setText(analysisResult.getNucleotideComposition().getGPercentage()+"%");
         }else{
             amountALbl.setText("N/A");
             amountTLbl.setText("N/A");
@@ -123,7 +124,5 @@ public class ResultsController implements Initializable {
             percentageCLbl.setText("N/A");
             percentageGLbl.setText("N/A");
         }
-        
-        
     }
 }
