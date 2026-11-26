@@ -11,6 +11,11 @@ package com.mycompany.geneanalyzerprroject;
 public class SequenceAnalyzer {
     
     public AnalysisResult analyze(DNASequence sequence) {
+             
+        SequenceValidator validator = new SequenceValidator();
+        if (sequence == null || !validator.isValidSequence(sequence.getRawSequence())) {
+            return null;
+        }
 
         NucleotideComposition composition = new NucleotideComposition(sequence);
         int total = sequence.length();
